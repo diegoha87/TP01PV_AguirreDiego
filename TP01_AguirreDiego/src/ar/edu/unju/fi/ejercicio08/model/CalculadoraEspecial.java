@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.ejercicio8.model;
+package ar.edu.unju.fi.ejercicio08.model;
 
 public class CalculadoraEspecial {
 	

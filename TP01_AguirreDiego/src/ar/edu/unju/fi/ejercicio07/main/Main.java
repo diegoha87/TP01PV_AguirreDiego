@@ -1,7 +1,7 @@
-package ar.edu.unju.fi.ejercicio7.main;
+package ar.edu.unju.fi.ejercicio07.main;
 import java.util.Scanner;
 
-import ar.edu.unju.fi.ejercicio7.model.Empleado;
+import ar.edu.unju.fi.ejercicio07.model.Empleado;
 
 public class Main {
 

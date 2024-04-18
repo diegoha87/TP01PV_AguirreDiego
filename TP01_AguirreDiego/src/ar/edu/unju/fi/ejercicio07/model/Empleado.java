@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.ejercicio7.model;
+package ar.edu.unju.fi.ejercicio07.model;
 
 public class Empleado {
 	private String nombre;

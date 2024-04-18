@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.ejercicio9.model;
+package ar.edu.unju.fi.ejercicio09.model;
 
 public class Producto {
 	private String nombre;
