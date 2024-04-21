@@ -111,6 +111,9 @@ public class Main {
 					fechaNacimiento = LocalDate.of(anio, mes, dia);
 					Jugador jugador1 = new Jugador(nombre, apellido, fechaNacimiento, nacionalidad, estatura, peso, posicion);
 					jugador.add(jugador1);
+					System.out.println("-----------------------------------------------------");
+					System.out.println("El jugador se agrego exitosamente.");
+					System.out.println("-----------------------------------------------------");
 				}
 				catch (Exception e5) {
 					System.out.println(" ");
@@ -193,6 +196,15 @@ public class Main {
 					for (int i = 0;i < jugador.size() && band3 == false;i++) {
 						Jugador elementoLista = jugador.get(i);
 						if (elementoLista.getNombre().equals(nombre) && elementoLista.getApellido().equals(apellido)) {
+							boolean band5 = false;
+							Iterator iterator = jugador.iterator();
+							while(iterator.hasNext() && band5 == false) {
+								Jugador j = (Jugador) iterator.next();
+								if (j.getNombre().equals(nombre) && j.getApellido().equals(apellido)) {
+									iterator.remove();
+									band5 = true;
+								}
+							}
 							System.out.println("-------------------------------------");
 							System.out.println("Ingrese el nombre: ");
 							nombre = scanner.next();
@@ -280,9 +292,9 @@ public class Main {
 						System.out.println("---------------------------");
 					}
 					else {
-						System.out.println("---------------------------");
+						System.out.println("-----------------------------");
 						System.out.println("El jugador ha sido modificado.");
-						System.out.println("---------------------------");
+						System.out.println("-----------------------------");
 
 					}
 				}
@@ -306,9 +318,9 @@ public class Main {
 						Jugador j = (Jugador) iterator.next();
 						if (j.getNombre().equals(nombre) && j.getApellido().equals(apellido)) {
 							iterator.remove();
-							System.out.println("---------------------------");
+							System.out.println("-----------------------------");
 							System.out.println("El jugador ha sido eliminado.");
-							System.out.println("---------------------------");
+							System.out.println("-----------------------------");
 							band4 = true;
 						}
 					}
@@ -321,9 +333,9 @@ public class Main {
 				
 				break;
 			case 6:
-				System.out.println("---------------------------");
+				System.out.println("---------------------------------------");
 				System.out.println("La cantidad de jugadores es: "+jugador.size());
-				System.out.println("---------------------------");
+				System.out.println("---------------------------------------");
 				break;
 			case 7:
 				if (jugador.isEmpty()) {
@@ -345,14 +357,14 @@ public class Main {
 					}
 					
 					if (band2 == false) {
-						System.out.println("---------------------------");
+						System.out.println("--------------------------------------------------");
 						System.out.println("No hay jugadores registrados con esa Nacionalidad.");
-						System.out.println("---------------------------");
+						System.out.println("--------------------------------------------------");
 					}
 					else {
-						System.out.println("---------------------------");
+						System.out.println("-------------------------------------------------------------------");
 						System.out.println("La cantidad de jugadores de nacionalidad "+nacionalidad+" es: "+cont);
-						System.out.println("---------------------------");
+						System.out.println("-------------------------------------------------------------------");
 					}
 				}
 				
